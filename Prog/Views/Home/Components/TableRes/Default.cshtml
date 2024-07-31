@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "TestResults";
+}
+@model List<Prog.Model.TestInfo>
+
+@section Style
+{
+    
+    <link rel="stylesheet" href="~css/css_TableRes/style.css">
+}
+<div class="container no-gutters">
+
+    <table class="table">
+
+        <thead class="table-light">
+            <tr>
+                <th scape="col"> #    </th>
+                <th scape="col"> Тема </th>
+                <th scape="col"> Дата </th>
+                <th scape="col"> Бали </th>
+            </tr>
+        </thead>
+        <tbody>
+         
+            @{
+                int i=1;
+                foreach(var item in @Model)
+                {
+                
+                <tr>
+                    <th scape="row">@i</th>
+                    <td>@item.Theme.Name</td>
+                    <td>@item.Date_.Date</td>
+                    <td>@item.Result</td>
+                </tr>
+                    i++; 
+                }
+            }
+
+        </tbody>
+
+
+
+
+
+    </table>
+
+
+
+
+</div>
